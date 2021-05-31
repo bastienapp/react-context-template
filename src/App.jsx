@@ -1,9 +1,10 @@
-import RemoveMe from './components/RemoveMe';
+import React from 'react';
+import MainRouter from './components/router/MainRouter';
 
 function App() {
   return (
     <div className="App">
-      <RemoveMe />
+      <MainRouter />
     </div>
   );
 }
