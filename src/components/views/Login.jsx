@@ -1,14 +1,18 @@
 import axios from 'axios';
-import React from 'react';
+import React, { useContext } from 'react';
+import UserContext from '../../contexts/UserContext';
 import MainLayout from '../layouts/MainLayout';
 
 function Login() {
+  const { setUser } = useContext(UserContext);
+
   const fakeLogin = (e) => {
     e.preventDefault();
     axios.get('https://randomuser.me/api/').then((response) => {
       const user = response.data.results[0];
       console.log(user);
       // TODO save user in the context
+      setUser(user);
     });
   };
 
