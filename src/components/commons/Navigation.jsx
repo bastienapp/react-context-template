@@ -5,7 +5,7 @@ function Navigation({ children }) {
     <nav>
       <ul>
         {children.map((link) => (
-          <li>{link}</li>
+          <li key={link.props.to}>{link}</li>
         ))}
       </ul>
     </nav>
